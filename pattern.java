@@ -1,65 +1,54 @@
-
-Generate the pattern for the given input value.
-
+Generate the following pattern for the given value input n.
 Input:
-
-4
-
+5
 Output:
-1 1 1 1 3
-4 2 2 2 2
-3 3 3 3 5
-6 4 4 4 4
+*****
+ *   *
+  *   *
+   *   *
+    *****
 
 
-import java.util.*;
+
+
+import java.util.Scanner;
 public class pattern 
 {
 	public static void main(String args[])
 	{
 	 Scanner sc=new Scanner(System.in);  
-	int num=sc.nextInt();
-int k=1;
-
-	for(int i=0;i<num;i++)
+int n=sc.nextInt();
+for(int i=0;i<n;i++)
+{
+	for(int j=0;j<i;j++)
 	{
-		if(i%2==0)
+System.out.print(" ");
+	}
+	if(i==0 || i==n-1)
+	{
+		for(int k=0;k<n;k++)
 		{
-			for(int j=0;j<num+1;j++)
-			{
-			 if(j==(num+1)-1)
-			 {
-				 System.out.print(k+2);
-			 }
-			 else
-			 {
-				 System.out.print(k+" ");
-			 }
-			}
-			k++;
+		System.out.print("*");
 		}
-		else 
+    }
+	else
+	{
+		for(int k=0;k<n;k++)
 		{
-			for(int j=0;j<num+1;j++)
+			if(k==0 || k==n-1)
 			{
-				if(j==0)
-				{
-					System.out.print((k+2)+" ");
-				}
-				else if(j==(num+1)-1)
-				{
-					System.out.print(k);
-				}
-				else
-				{
-					System.out.print(k+" ");
-				}								
+				System.out.print("*");
 			}
-			k++;
+			else
+			{
+				System.out.print(" ");
+			}
 		}
-		
-		System.out.println();
 	}
 	
+	System.out.println();
+	
+	 
+}	 
 	}
 }
