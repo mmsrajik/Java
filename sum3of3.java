@@ -7,7 +7,7 @@ If the 3 input numbers are 23792,37221 and 10270.
 The largest numbers that can be produced using 3 digits from each of these are 973,732 and 721 respectively, and the sum of these largest numbers will be 2426.
 Therefore, the expected result is 2426.
 
-Note– All the given 3 numbers will be >=100 and <=99999.
+Noteâ€“ All the given 3 numbers will be >=100 and <=99999.
 
 Runtime Input : 
 23792 37221 10270
@@ -57,5 +57,38 @@ public class sum3of3
 		//System.out.println(iarr[i]);
 	}
 	System.out.println(sum);
+	}
+}
+
+
+other way:
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int arr=0;
+	      String sarr="";
+	      int ans=0;
+	      String str="";
+	     
+	      int sum=0;
+	    for(int i=0;i<3;i++)
+	    {
+	        arr=sc.nextInt();
+	        sarr=String.valueOf(arr);
+	        
+	        char[] carr=sarr.toCharArray();
+	        
+	        Arrays.sort(carr);//, Collections.reverseOrder());
+	        str=String.valueOf(carr);
+	        StringBuffer sb=new StringBuffer(str);
+	       
+	        String nstr=new String( sb.reverse());
+	        ans=Integer.parseInt(nstr.substring(0,3));
+	        sum=sum+ans;
+	    }
+		System.out.println(sum);
 	}
 }
