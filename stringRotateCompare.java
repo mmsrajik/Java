@@ -48,3 +48,43 @@ public class stringRotateCompare
         
     }
 }
+
+alternative way:
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    String str1=sc.nextLine();
+	    String str2=sc.nextLine();
+	    String arr1[]=str1.split(" ");
+	    String arr2[]=str2.split(" ");
+	    ArrayList<String> al2=new ArrayList<String>(Arrays.asList(arr2));
+	    
+	    for(int i=0;i<arr1.length;i++)
+	    {
+	        for(int j=0;j<arr2.length;j++)
+	        {
+	            
+	            if(arr1[i].equals(arr2[j]))
+	            {
+	                al2.remove(j);
+	            }
+	        }
+	        
+	        System.out.println(al2);
+	    }
+	    
+	    if(al2.size()==0 && (arr1.length == arr2.length))
+	    {
+	        System.out.println("Yes");
+	    }
+	    else
+	    {
+	        System.out.println("No");
+	    }
+	}
+}
+
+
