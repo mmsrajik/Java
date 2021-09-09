@@ -1,5 +1,5 @@
 Question :
-Design an algorithm to accept a string from the user. Replace all vowels (‘a’, ‘e’, ‘I’, ‘o’, ‘u’) with ‘z’. If there are no vowels in the string just print the message “No vowels present”.
+Design an algorithm to accept a string from the user. Replace all vowels (â€˜aâ€™, â€˜eâ€™, â€˜Iâ€™, â€˜oâ€™, â€˜uâ€™) with â€˜zâ€™. If there are no vowels in the string just print the message â€œNo vowels presentâ€.
 
 Runtime Input : 
 java
@@ -40,4 +40,39 @@ public class replaceVowels
 	   
 	   
 	}
+}
+
+
+
+other way:
+
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+        Scanner sc=new Scanner(System.in);
+        String str1=sc.nextLine();
+        String arr[]={"a","e","i","o","u"};
+        int temp=0;
+        for(int i=0;i<5;i++)
+        {
+            
+            if(str1.contains(arr[i]))
+            {
+                temp=1;
+                str1=str1.replace(arr[i],"z");
+            }
+        }
+        
+        if(temp==0)
+        {
+            System.out.println("No vowels present");
+        }
+        else
+        {
+            System.out.println(str1);
+        }
+       
+     }
 }
