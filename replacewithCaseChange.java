@@ -1,8 +1,8 @@
 Question :
 Design an algorithm which accepts 2 strings from the user and performs the following operation on it.
-Example –
-string1 = “Hello”
-string2 = “World” string3 must be “HellodlroW”
+Example â€“
+string1 = â€œHelloâ€
+string2 = â€œWorldâ€ string3 must be â€œHellodlroWâ€
 Both strings must be concatenated but after reversing the second string (as shown in string3 above).
 
 Next toggle the string3 characters from upper case to lowercase and lowercase to uppercase. Finally print the string3.
@@ -49,4 +49,36 @@ public class replacewithCase
 	   }	  		   
 	   System.out.println(nstr);	   
 	}
+}
+
+
+
+other way:
+
+
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+        Scanner sc=new Scanner(System.in);
+        String str1=sc.nextLine();
+        String str2=sc.nextLine();
+        String str3="";
+        
+        StringBuffer sb=new StringBuffer(str2);
+        sb.reverse();
+        str3=str1+sb;
+        for(int i=0;i<str3.length();i++)
+        {
+            if(Character.isUpperCase(str3.charAt(i)))
+            {
+        System.out.print((str3.substring(i,i+1)).toLowerCase());
+            }
+            else
+            {
+                System.out.print((str3.substring(i,i+1)).toUpperCase());
+            }
+        }
+     }
 }
