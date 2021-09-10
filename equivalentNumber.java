@@ -62,3 +62,34 @@ public class equivalentNumber
 	  
 	}
 }
+
+
+other way:
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+       Scanner sc=new Scanner(System.in);
+       String str=sc.nextLine();
+       for(int i=0;i<str.length();i++)
+       {
+           if(Character.isLetter(str.charAt(i)))
+           {
+               
+       char val=str.charAt(i);
+       int v=val;
+       if(Character.isUpperCase(str.charAt(i)))
+       {
+           System.out.print(v-64);
+       }
+       else
+       {
+        System.out.print(v-96);
+        }
+        
+               
+           }
+       }
+     }
+}
