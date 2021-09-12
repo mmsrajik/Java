@@ -62,3 +62,77 @@ public class consecutiveLetters
 	
 	}
 }
+
+
+some ligic issue in upper program.
+	New Modified program:
+
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+        
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        int val=0;
+        for(int i=0;i<str.length();i++)
+        {
+        char ch=str.charAt(i);
+        char temp1=--ch;
+        char temp2=++ch;
+        ++temp2;
+        
+        
+        
+        for(int k=0;k<str.length();k++)
+		{
+			for(int j=k+1;j<str.length();j++)
+			{
+				if(str.charAt(k)==str.charAt(j))
+				{
+					System.out.println("No");
+					System.exit(0);
+				}
+			}
+		}
+		
+        
+        if(i==0)
+        {
+            if(str.charAt(i+1)==temp2)
+        {
+            System.out.println("Yes");
+            val=1;
+            
+        }
+            
+        }
+        else if(i==str.length()-1)
+        {
+            if(str.charAt(i-1)==temp1 || str.charAt(i-1)==temp2)
+        {
+            System.out.println("Yes");
+            val=1;
+        }
+            
+        }
+        else
+        {
+        if(str.charAt(i+1)==temp2 || str.charAt(i-1)==temp1)
+        {
+            System.out.println("Yes");
+            val=1;
+        }
+        }
+        
+       
+     }
+     
+     if(val==0)
+     {
+         System.out.println("No");
+     }
+}
+}
+
