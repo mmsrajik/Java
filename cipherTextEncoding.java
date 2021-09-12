@@ -50,3 +50,47 @@ public class cipherTextEncoding
         System.out.println(nstr);
     }
 }
+
+
+other way:
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+         Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        int val=sc.nextInt();
+        int t=0;
+        int temp=0;
+        char ans;
+        for(int i=0;i<str.length();i++)
+        {
+            t=str.charAt(i);
+            t=t+val;
+            if(Character.isLowerCase(str.charAt(i)))
+            {
+                
+                if(t>122)
+                {
+                temp=(t-(122))+64;
+                t=temp;
+                }
+            }
+            else if(Character.isUpperCase(str.charAt(i)))
+            {
+                if(t>90)
+                {
+                temp=(t-90)+64;
+                t=temp;
+                }
+            } 
+            ans=(char)t;
+            
+            System.out.print(Character.toUpperCase(ans));
+            
+        }
+        
+        
+     }
+}
