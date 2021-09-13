@@ -98,3 +98,60 @@ else
 
 	}
 }
+
+
+
+
+other way:  
+
+
+import java.util.*;
+public class ValidateShuffledString{
+
+     public static void main(String []args){
+        Scanner sc=new Scanner(System.in);
+        String str1=sc.nextLine();
+        String str2=sc.nextLine();
+        String str3=sc.nextLine();
+        int count=0;
+        boolean check=false;
+        String arr[]=new String[2];
+        arr[0]=str1;
+        arr[1]=str2;
+        int temp=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            for(int j=0;j<arr[i].length();j++)
+            {
+                for(int k=temp;k<str3.length();k++)
+                {
+                    if(arr[i].charAt(j)==str3.charAt(k))
+                    {
+                       
+                        count++;
+                        temp=k+1;
+                        break;
+                    }
+                    
+                }
+               
+            }
+            if(count==arr[i].length())
+            {
+               
+               check=true;
+            }
+            else
+            {
+                System.out.print("False");
+                System.exit(0);
+            }
+            temp=0;
+            count=0;
+        }
+        
+        
+        if(check==true)
+        System.out.println("True");
+     }
+}
