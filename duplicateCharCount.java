@@ -1,3 +1,12 @@
+Design an algorithm to accept a string from the user and print all duplicate character (which occur more than once) and their count. Characters which appear only once in the string must not be displayed. Also if there are no duplicate characters in the given string a message “No duplicate characters” must be printed.
+For example if given String is “Programming” then your output should print
+g: 2
+r: 2
+m: 2
+
+
+
+
 import java.util.*;
 public class duplicateCharCount{
 
