@@ -57,7 +57,7 @@ Solution
 
 
 import java.util.Scanner;
-public class HelloWorld{
+public class recursivePossibleWays{
     static int CountCoin(int n)
     {
         if (n == 0) {
